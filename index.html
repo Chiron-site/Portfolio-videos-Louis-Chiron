@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Louis Chiron - Portfolio Affiches</title>
+    <title>Louis Chiron - Portfolio Affiches & Vidéos</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -12,10 +12,9 @@
             background: #f8f9fa;
             color: #333;
             line-height: 1.6;
-            padding-top: 80px; /* Ajusté pour le menu */
+            padding-top: 80px;
         }
         
-        /* Menu identique aux autres pages */
         header {
             position: fixed;
             top: 0;
@@ -43,7 +42,6 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: all 0.4s ease;
-            position: relative;
         }
 
         .nav-link:hover {
@@ -51,7 +49,7 @@
             letter-spacing: 3px;
         }
 
-        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; min-height: 80vh; }
+        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
         
         h2 { 
             text-align: center; 
@@ -83,7 +81,44 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
         
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        /* Styles spécifiques Vidéos & Bouton YouTube */
+        .video-gallery {
+            display: flex;
+            justify-content: center;
+        }
+
+        .video-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .video-card .gallery-item {
+            width: 100%;
+            aspect-ratio: 16/9; /* Format vidéo */
+        }
+
+        .video-btn {
+            display: inline-block;
+            background: white;
+            color: #2c3e50;
+            padding: 12px 30px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .video-btn:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18); 
+        }
 
         footer { background: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
 
@@ -126,6 +161,18 @@
             </div>
             <div class="gallery-item">
                 <img src="https://new.express.adobe.com/webpage/TsLCb6f4qSFm9/resources/f460d6a6-cb32-4607-a459-fcb01f112b17-sans_titre_p?asset_id=a36102ab-a97d-465f-b265-09bf4f494be0&img_etag=%2209b97383ee9c4e9492c023ea0af1de5e%22&image_assets=false&size=3621" alt="Affiche 5">
+            </div>
+        </div>
+    </section>
+
+    <section id="videos">
+        <h2>Vidéos</h2>
+        <div class="video-gallery">
+            <div class="video-card">
+                <div class="gallery-item">
+                    <img src="https://new.express.adobe.com/webpage/TsLCb6f4qSFm9/resources/460d592e-6f46-4709-b03d-f3364bc2a697-img_1464_jpe?asset_id=fbc2b660-d44a-43b5-bf01-797bfc0d73ca&img_etag=%224c7d5492629b4f669fc4c61db130438a%22&image_assets=false&size=1024" alt="Miniature Vidéo">
+                </div>
+                <a class="video-btn" href="https://www.youtube.com/channel/UC_sBheo_TxHa7WUK301RWgg" target="_blank" rel="noopener">Mon youtube</a>
             </div>
         </div>
     </section>
