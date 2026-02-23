@@ -42,7 +42,7 @@
         }
 
         /* SECTION VIDEOS */
-        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
+        section { padding: 5rem 5%; max-width: 900px; margin: 0 auto; } /* Largeur réduite pour 1 par ligne */
         
         h2 { 
             text-align: center; 
@@ -53,11 +53,11 @@
             text-transform: uppercase;
         }
         
-        /* GRILLE VIDEOS : 2 PAR LIGNE */
-        .video-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Force 2 colonnes */
-            gap: 2.5rem;
+        /* LISTE VIDEOS : 1 PAR LIGNE */
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem; /* Espace entre les vidéos */
             margin-bottom: 4rem;
         }
 
@@ -65,14 +65,9 @@
             width: 100%;
             aspect-ratio: 16/9;
             background: #000;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .video-container:hover {
-            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .video-container iframe {
@@ -86,27 +81,28 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 25px;
-            margin-top: 50px;
+            gap: 20px;
+            margin-top: 60px;
+            padding-bottom: 20px;
         }
 
         .bottom-image {
             width: 100%;
-            max-width: 250px; /* Encore un peu plus petite */
+            max-width: 200px; /* Taille encore plus petite comme demandé */
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
         .video-btn {
             display: inline-block;
             background: #2c3e50;
             color: white;
-            padding: 12px 35px;
+            padding: 14px 40px;
             border-radius: 999px;
             text-decoration: none;
             font-weight: 600;
             box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-            transition: all 0.2s;
+            transition: all 0.3s ease;
         }
 
         .video-btn:hover { 
@@ -117,11 +113,9 @@
 
         footer { background: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
 
-        /* RESPONSIVE : 1 PAR LIGNE SUR MOBILE */
         @media (max-width: 768px) {
             nav { gap: 15px; }
             .nav-link { font-size: 0.7rem; }
-            .video-grid { grid-template-columns: 1fr; } 
             h2 { font-size: 1.8rem; }
         }
     </style>
@@ -140,9 +134,9 @@
     </header>
 
     <section id="videos">
-        <h2>Mes Réalisations</h2>
+        <h2>Vidéos</h2>
         
-        <div class="video-grid">
+        <div class="video-list">
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/WHvNeh9Hsz0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
@@ -158,7 +152,7 @@
         </div>
 
         <div class="footer-cta">
-            <img src="https://new.express.adobe.com/webpage/TsLCb6f4qSFm9/resources/460d592e-6f46-4709-b03d-f3364bc2a697-img_1464_jpe?asset_id=fbc2b660-d44a-43b5-bf01-797bfc0d73ca&img_etag=%224c7d5492629b4f669fc4c61db130438a%22&image_assets=false&size=1024" alt="Louis Chiron" class="bottom-image">
+            <img src="https://new.express.adobe.com/webpage/TsLCb6f4qSFm9/resources/460d592e-6f46-4709-b03d-f3364bc2a697-img_1464_jpe?asset_id=fbc2b660-d44a-43b5-bf01-797bfc0d73ca&img_etag=%224c7d5492629b4f669fc4c61db130438a%22&image_assets=false&size=1024" alt="Louis Chiron Portrait" class="bottom-image">
             <a class="video-btn" href="https://www.youtube.com/channel/UC_sBheo_TxHa7WUK301RWgg" target="_blank" rel="noopener">Voir plus sur mon YouTube</a>
         </div>
     </section>
